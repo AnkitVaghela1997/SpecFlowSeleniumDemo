@@ -2,8 +2,8 @@ using BDDTestFramework.Pages;
 using BDDTestFramework.Utilities;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
-
-
+using NUnit.Framework;
+using System;
 namespace BDDTestFramework.StepDefinitions
 {
     [Binding]
@@ -12,15 +12,16 @@ namespace BDDTestFramework.StepDefinitions
         private readonly IWebDriver _driver;
         private readonly LoginPage _loginPage;
 
-        public LoginSteps()
+        public LoginSteps(DriverContext context)
         {
-            _driver = DriverFactory.Driver;
+            _driver = context.Driver;
             _loginPage = new LoginPage(_driver);
         }
 
         [Given(@"I navigate to the login page")]
         public void GivenINavigateToTheLoginPage()
         {
+             Console.WriteLine("Navigating to SauceDemo...");
             _driver.Manage().Window.Maximize();
             _driver.Navigate().GoToUrl("https://www.saucedemo.com/v1/index.html");
         }
