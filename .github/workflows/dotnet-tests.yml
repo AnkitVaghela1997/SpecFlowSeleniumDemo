@@ -1,0 +1,30 @@
+name: .NET 6 SpecFlow Tests
+
+on:
+  push:
+    branches: [ main, QA ]
+  pull_request:
+    branches: [ main, QA ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET 6 SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build project
+      run: dotnet build --configuration Release
+
+    - name: Run SpecFlow Tests
+      run: dotnet test --no-build --configuration Release
