@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RSUGdWPSqDKkHWHs/tw91gCN7lSfY+TUoi5EPT6YT72DAB2u3Yb7an5e47FJktPv/fh9Z9xkZebC2Fk3y7UjLQ==",
+  "dgSpecHash": "bACb2LV9lHBWZ/gnbEldCxXdBVPYvG9aNltqGPXR/hRBY3lZnMfzc3tTuX+qPn0psYe1K8D0+H0Un11qdSFvGA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\SpecFlowSeleniumDemo\\BDDTestFramework\\BDDTestFramework.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\Admin\\.nuget\\packages\\gherkin\\19.0.3\\gherkin.19.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.codecoverage\\17.4.1\\microsoft.codecoverage.17.4.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\1.0.3\\microsoft.dotnet.platformabstractions.1.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencymodel\\1.0.3\\microsoft.extensions.dependencymodel.1.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.net.test.sdk\\17.4.1\\microsoft.net.test.sdk.17.4.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",

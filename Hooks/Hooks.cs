@@ -1,31 +1,28 @@
 using TechTalk.SpecFlow;
 using BDDTestFramework.Utilities;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
 namespace BDDTestFramework.Hooks
 {
     [Binding]
     public class Hooks
     {
-        private readonly DriverContext _driverContext;
+        private readonly DriverContext _context;
 
-        public Hooks(DriverContext driverContext)
+        public Hooks(DriverContext context)
         {
-            _driverContext = driverContext;
+            _context = context;
         }
 
         [BeforeScenario]
         public void BeforeScenario()
         {
-            _driverContext.Driver = new ChromeDriver();
-            _driverContext.Driver.Manage().Window.Maximize();
+            _context.Driver = DriverFactory.CreateDriver();
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            _driverContext.Driver.Quit();
+            _context.Driver.Quit();
         }
     }
 }

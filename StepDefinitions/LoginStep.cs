@@ -1,9 +1,9 @@
 using BDDTestFramework.Pages;
 using BDDTestFramework.Utilities;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
-using NUnit.Framework;
-using System;
+
 namespace BDDTestFramework.StepDefinitions
 {
     [Binding]
@@ -21,9 +21,8 @@ namespace BDDTestFramework.StepDefinitions
         [Given(@"I navigate to the login page")]
         public void GivenINavigateToTheLoginPage()
         {
-             Console.WriteLine("Navigating to SauceDemo...");
-            _driver.Manage().Window.Maximize();
             _driver.Navigate().GoToUrl("https://www.saucedemo.com/v1/index.html");
+            _driver.Manage().Window.Maximize();
         }
 
         [When(@"I login with username ""(.*)"" and password ""(.*)""")]
@@ -37,7 +36,7 @@ namespace BDDTestFramework.StepDefinitions
         [Then(@"I should be redirected to the inventory page")]
         public void ThenIShouldBeRedirectedToTheInventoryPage()
         {
-            Assert.IsTrue(_driver.Url.Contains("inventory"), "Login failed or not redirected correctly.");
+            Assert.IsTrue(_driver.Url.Contains("inventory"), "User is not redirected to the inventory page.");
         }
     }
 }

@@ -19,6 +19,8 @@ C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\SeleniumEx
 C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\Gherkin.dll
 C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\Microsoft.TestPlatform.PlatformAbstractions.dll
