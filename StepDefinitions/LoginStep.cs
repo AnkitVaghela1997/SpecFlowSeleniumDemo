@@ -3,6 +3,7 @@ using BDDTestFramework.Utilities;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
+using System;
 
 namespace BDDTestFramework.StepDefinitions
 {
@@ -21,8 +22,16 @@ namespace BDDTestFramework.StepDefinitions
         [Given(@"I navigate to the login page")]
         public void GivenINavigateToTheLoginPage()
         {
-            _driver.Navigate().GoToUrl("https://www.saucedemo.com/v1/index.html");
+            try
+            {
+            _driver.Navigate().GoToUrl("https://www.saucedemo.com");
             _driver.Manage().Window.Maximize();
+            }
+            catch (WebDriverTimeoutException ex)
+            {
+               Console.WriteLine($"Page load timeout: {ex.Message}");
+               throw;
+            }
         }
 
         [When(@"I login with username ""(.*)"" and password ""(.*)""")]

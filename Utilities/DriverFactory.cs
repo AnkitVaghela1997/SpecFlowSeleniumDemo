@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 
 namespace BDDTestFramework.Utilities
 {
@@ -8,7 +9,7 @@ namespace BDDTestFramework.Utilities
         public static IWebDriver CreateDriver()
         {
             var options = new ChromeOptions();
-            options.AddArgument("start-maximized");
+            options.AddArgument("--headless");
             return new ChromeDriver(options);
         }
     }
