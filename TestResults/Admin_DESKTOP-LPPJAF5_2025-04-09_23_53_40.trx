@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="7266527f-e438-46e7-b1dc-e5879368b775" name="Admin@DESKTOP-LPPJAF5 2025-04-09 23:53:40" runUser="DESKTOP-LPPJAF5\Admin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-09T23:53:40.2494900+05:30" queuing="2025-04-09T23:53:40.2494907+05:30" start="2025-04-09T23:50:05.3113212+05:30" finish="2025-04-09T23:53:40.3266163+05:30" />
+  <TestSettings name="default" id="46fdb83f-26c2-4ecb-ba2d-edb979fde345">
+    <Deployment runDeploymentRoot="Admin_DESKTOP-LPPJAF5_2025-04-09_23_53_40" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="437e25f8-db0d-47e5-825c-c632240c37bc" testId="225d9c04-f1df-f878-9f9f-b0d1ffafa550" testName="SuccessfulLoginWithValidCredentials" computerName="DESKTOP-LPPJAF5" duration="00:03:24.8650500" startTime="2025-04-09T23:50:14.2670154+05:30" endTime="2025-04-09T23:53:39.1316954+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="437e25f8-db0d-47e5-825c-c632240c37bc">
+      <Output>
+        <StdOut>Given I navigate to the login page&#xD;
+-&gt; error: The HTTP request to the remote WebDriver server for URL http://localhost:57666/session/63f01d58cc7cfab517ed19af06bf8dbf/url timed out after 60 seconds. (61.3s)&#xD;
+When I login with username "standard_user" and password "secret_sauce"&#xD;
+-&gt; skipped because of previous errors&#xD;
+Then I should be redirected to the inventory page&#xD;
+-&gt; skipped because of previous errors</StdOut>
+        <ErrorInfo>
+          <Message>OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:57666/session/63f01d58cc7cfab517ed19af06bf8dbf/url timed out after 60 seconds.&#xD;
+  ----&gt; System.Threading.Tasks.TaskCanceledException : The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.&#xD;
+  ----&gt; System.TimeoutException : The operation was canceled.&#xD;
+  ----&gt; System.Threading.Tasks.TaskCanceledException : The operation was canceled.&#xD;
+  ----&gt; System.IO.IOException : Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..&#xD;
+  ----&gt; System.Net.Sockets.SocketException : The I/O operation has been aborted because of either a thread exit or an application request.</Message>
+          <StackTrace>   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)&#xD;
+   at OpenQA.Selenium.Navigator.GoToUrlAsync(String url)&#xD;
+   at OpenQA.Selenium.Navigator.&lt;&gt;c__DisplayClass6_0.&lt;&lt;GoToUrl&gt;b__0&gt;d.MoveNext()&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)&#xD;
+   at BDDTestFramework.StepDefinitions.LoginSteps.GivenINavigateToTheLoginPage() in C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\StepDefinitions\LoginStep.cs:line 27&#xD;
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)&#xD;
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()&#xD;
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()&#xD;
+   at BDDTestFramework.Features.SauceDemoLoginFeature.ScenarioCleanup()&#xD;
+   at BDDTestFramework.Features.SauceDemoLoginFeature.SuccessfulLoginWithValidCredentials() in C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\Features\Login.feature:line 7&#xD;
+--TaskCanceledException&#xD;
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)&#xD;
+   at System.Net.Http.HttpClient.&lt;SendAsync&gt;g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)&#xD;
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)&#xD;
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)&#xD;
+--TimeoutException&#xD;
+&#xD;
+--TaskCanceledException&#xD;
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+   at System.Net.Http.HttpClient.&lt;SendAsync&gt;g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)&#xD;
+--IOException&#xD;
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)&#xD;
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource&lt;System.Int32&gt;.GetResult(Int16 token)&#xD;
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)&#xD;
+--SocketException&#xD;
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SuccessfulLoginWithValidCredentials" storage="c:\users\admin\specflowseleniumdemo\bddtestframework\bin\debug\net6.0\bddtestframework.dll" id="225d9c04-f1df-f878-9f9f-b0d1ffafa550">
+      <Execution id="437e25f8-db0d-47e5-825c-c632240c37bc" />
+      <TestMethod codeBase="C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\BDDTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="BDDTestFramework.Features.SauceDemoLoginFeature" name="SuccessfulLoginWithValidCredentials" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="225d9c04-f1df-f878-9f9f-b0d1ffafa550" executionId="437e25f8-db0d-47e5-825c-c632240c37bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" passed="0" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.2.0.0: Test execution started&#xD;
+Running all tests in C:\Users\Admin\SpecFlowSeleniumDemo\BDDTestFramework\bin\Debug\net6.0\BDDTestFramework.dll&#xD;
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 4.2.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-LPPJAF5" outcome="Warning" timestamp="2025-04-09T23:53:39.2898535+05:30">
+        <Text>Given I navigate to the login page&#xD;
+-&gt; error: The HTTP request to the remote WebDriver server for URL http://localhost:57666/session/63f01d58cc7cfab517ed19af06bf8dbf/url timed out after 60 seconds. (61.3s)&#xD;
+When I login with username "standard_user" and password "secret_sauce"&#xD;
+-&gt; skipped because of previous errors&#xD;
+Then I should be redirected to the inventory page&#xD;
+-&gt; skipped because of previous errors&#xD;
+</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
